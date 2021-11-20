@@ -1,11 +1,23 @@
 <template>
     <div class="media-list-wrapper">
         <div v-if="!isLoading" class="media-list">
-            <media-item
+            <div
+                class="media-item-wrapper"
                 v-for="(media, index) in filteredMediaList"
                 :key="`mi-${index}`"
-                :media="media"
-            ></media-item>
+            >
+                <router-link
+                    :to="{
+                        name: 'MediaDetails',
+                        params: {
+                            mediaType: media.media_type,
+                            mediaId: media.id,
+                        },
+                    }"
+                >
+                    <media-item :media="media" />
+                </router-link>
+            </div>
         </div>
 
         <loading v-if="isLoading" />

@@ -1,22 +1,15 @@
 <template>
     <div>
-        <filters />
-        <media-list />
+        <router-view />
     </div>
 </template>
 
 <script>
 import store from "./store/index";
-import Filters from "./components/Filters/Filters.vue";
-import MediaList from "./components/MediaList/MediaList.vue";
 
 export default {
     name: "App",
     store,
-    components: {
-        Filters,
-        MediaList,
-    },
 };
 </script>
 
@@ -26,7 +19,6 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
-    padding: 24px;
     height: 100%;
     width: 100%;
 }
@@ -45,6 +37,11 @@ body {
 h1 {
     margin: 0;
     padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 *,
