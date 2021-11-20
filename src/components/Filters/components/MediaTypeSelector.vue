@@ -24,7 +24,7 @@
 
 <script>
 const mediaTypes = [
-    { value: "movie", text: "Movie" },
+    { value: "movie", text: "Movies" },
     { value: "person", text: "Person" },
     { value: "tv", text: "TV" },
 ];
@@ -57,10 +57,11 @@ export default {
     height: 40px;
     align-items: center;
     justify-content: center;
-    background: #d3d3d3;
+    background: #dddddd;
     border-radius: 10px;
     font-weight: bold;
     padding: 2px;
+    font-size: 14px;
 }
 
 .media-type {

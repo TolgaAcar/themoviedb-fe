@@ -30,6 +30,7 @@ export default {
     methods: {
         onSave() {
             this.$store.dispatch("setSearchInput", this.searchKeyword);
+            this.$store.dispatch("setShowMediaTypeSelector", true);
         },
     },
 };
@@ -37,11 +38,12 @@ export default {
 
 <style scoped>
 .search-input {
+    height: 40px;
     width: 100%;
     display: flex;
     align-items: center;
-    background: #d3d3d3;
-    border-radius: 20px;
+    background: #dddddd;
+    border-radius: 10px;
     padding: 0 10px;
 }
 

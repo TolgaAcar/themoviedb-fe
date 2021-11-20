@@ -1,7 +1,7 @@
 <template>
     <div>
-        <filters></filters>
-        <media-list></media-list>
+        <filters />
+        <media-list />
     </div>
 </template>
 
@@ -13,7 +13,10 @@ import MediaList from "./components/MediaList/MediaList.vue";
 export default {
     name: "App",
     store,
-    components: { Filters, MediaList },
+    components: {
+        Filters,
+        MediaList,
+    },
 };
 </script>
 
@@ -23,10 +26,18 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
-    background-color: #f5f5f5;
+    padding: 24px;
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    height: 100%;
 }
 
 body {
+    background-color: #f5f5f5;
+    min-height: 100%;
     margin: 0;
     padding: 0;
 }
