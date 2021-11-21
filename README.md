@@ -1,6 +1,6 @@
 # The Moviedb
 
-For live demo: [Demo Url]()
+For live demo: [Demo Url](https://themoviedb-fe.herokuapp.com/)
 
 ## Overview
 
@@ -13,7 +13,7 @@ Users should be able to:
 
 ## Links
 
--   Live Site URL: [Demo Url]()
+-   Live Site URL: [Demo Url](https://themoviedb-fe.herokuapp.com/)
 
 ## Built with
 
