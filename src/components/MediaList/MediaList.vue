@@ -3,12 +3,13 @@
         <div v-if="!isLoading" class="media-list">
             <div
                 class="media-item-wrapper"
+                :class="{ 'prevent-clicks': isPerson(media.media_type) }"
                 v-for="(media, index) in filteredMediaList"
                 :key="`mi-${index}`"
             >
                 <router-link
                     :to="{
-                        name: 'MediaDetails',
+                        name: 'Details',
                         params: {
                             mediaType: media.media_type,
                             mediaId: media.id,
@@ -107,9 +108,15 @@ export default {
                 this.isLoading = false;
             }
         },
+        isPerson(mediaType) {
+            return mediaType === "person";
+        },
     },
 };
 </script>
 
-<style>
+<style scoped>
+.prevent-clicks {
+    pointer-events: none;
+}
 </style>

@@ -26,6 +26,7 @@ export default {
     },
     created() {
         this.searchKeyword = "";
+        this.$store.dispatch("setSearchInput", this.searchKeyword);
     },
     methods: {
         onSave() {

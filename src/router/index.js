@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import MediaDetails from "../components/MediaDetail/MediaDetails.vue";
+import Details from "../views/Details.vue";
 
 const routes = [
 	{
@@ -10,8 +10,8 @@ const routes = [
 	},
 	{
 		path: "/media/:mediaType/:mediaId",
-		name: "MediaDetails",
-		component: MediaDetails,
+		name: "Details",
+		component: Details,
 	},
 ];
 
