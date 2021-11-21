@@ -2,7 +2,7 @@
     <div class="rating">
         <img
             class="star"
-            v-for="index in roundedRate"
+            v-for="index in fullStars"
             :key="`sf-${index}`"
             src="@/assets/star-full.png"
         />
@@ -16,6 +16,9 @@
 </template>
 
 <script>
+const totalStarNumber = 5;
+const translationValue = 2.0;
+
 export default {
     name: "Rating",
     props: {
@@ -25,14 +28,14 @@ export default {
         },
     },
     computed: {
-        rateInFive() {
-            return this.rating / 2.0;
+        currentRate() {
+            return this.rating / translationValue;
         },
-        roundedRate() {
-            return Math.round(this.rateInFive);
+        fullStars() {
+            return Math.round(this.currentRate);
         },
         emptyStars() {
-            return 5 - this.roundedRate;
+            return totalStarNumber - this.fullStars;
         },
     },
 };
